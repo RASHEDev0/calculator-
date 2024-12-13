@@ -1,0 +1,225 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #73a5ff, #5477f5);
+}
+
+.calculator {
+  border: none;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  width: 90%;
+  max-width: 400px;
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+input#mathInput {
+  width: 95%;
+  height: 60px;
+  margin-bottom: 20px;
+  text-align: right;
+  font-size: 28px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
+  transition: box-shadow 0.3s;
+}
+
+input#mathInput:focus {
+  box-shadow: 0 0 10px #007bff;
+  outline: none;
+}
+
+input.error {
+  color: red;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button.btn {
+  height: 50px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #6fa3ff, #507ff5);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button.btn:active {
+  background: linear-gradient(145deg, #507ff5, #6fa3ff);
+  transform: scale(0.95);
+}
+
+button.clr-button {
+  background: #ff4d4d;
+}
+
+button.clr-button:active {
+  background: #e04444;
+}
+
+button.del-button {
+  background: #ffbb33;
+}
+
+button.del-button:active {
+  background: #e0aa28;
+}
+
+button.equals-button {
+  background: #28a745;
+}
+
+button.equals-button:active {
+  background: #218838;
+}
+
+#themeSwitcher {
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "\f185"; /* Font Awesome sun icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 24px;
+  color: #ffc107;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  content: "\f186"; /* Font Awesome moon icon */
+  color: #f8f9fa;
+}
+
+/* Dark Mode Enhancements */
+body.dark-theme {
+  background: linear-gradient(135deg, #333, #444);
+}
+
+body.dark-theme .calculator {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+body.dark-theme input#mathInput {
+  background-color: #222;
+  color: white;
+}
+
+body.dark-theme button.btn {
+  background: linear-gradient(145deg, #555, #777);
+}
+
+body.dark-theme button.btn:active {
+  background: linear-gradient(145deg, #777, #555);
+}
+
+body.dark-theme .clr-button {
+  background: #ff3b3b; /* Bright red */
+}
+
+body.dark-theme .clr-button:active {
+  background: #e02b2b; /* Darker red */
+}
+
+body.dark-theme .del-button {
+  background: #ffc145; /* Bright yellow */
+}
+
+body.dark-theme .del-button:active {
+  background: #e0b035; /* Darker yellow */
+}
+
+body.dark-theme .equals-button {
+  background: #32cd32; /* Bright green */
+}
+
+body.dark-theme .equals-button:active {
+  background: #2eb82e; /* Darker green */
+}
+
+body.dark-theme .trig-button {
+  background: #bb86fc; /* Light purple */
+  color: black;
+}
+
+body.dark-theme .trig-button:active {
+  background: #6200ea; /* Darker purple */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .calculator {
+    width: 95%;
+    padding: 10px;
+  }
+  .buttons {
+    gap: 8px;
+  }
+  button.btn {
+    height: 45px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 601px) {
+  .calculator {
+    width: 50%;
+  }
+}

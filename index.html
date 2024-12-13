@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  
+<body>
+  <div class="calculator">
+    <label class="switch">
+      <input type="checkbox" id="themeSwitcher">
+      <span class="slider round sun-icon"></span>
+    </label>
+    <input type="text" id="mathInput" class="result-box" readonly>
+    <div class="buttons">
+      <!-- Numbers -->
+      <button class="btn" data-action="1">1</button>
+      <button class="btn" data-action="2">2</button>
+      <button class="btn" data-action="3">3</button>
+      <button class="btn" data-action="+">+</button>
+      <button class="btn" data-action="4">4</button>
+      <button class="btn" data-action="5">5</button>
+      <button class="btn" data-action="6">6</button>
+      <button class="btn" data-action="-">-</button>
+      <button class="btn" data-action="7">7</button>
+      <button class="btn" data-action="8">8</button>
+      <button class="btn" data-action="9">9</button>
+      <button class="btn" data-action="*">*</button>
+      <button class="btn" data-action="0">0</button>
+      <button class="btn" data-action=".">.</button>
+      <button class="btn clr-button" data-action="CLR">CLR</button>
+      <button class="btn" data-action="/">/</button>
+      <!-- Functions -->
+      <button class="btn" data-action="π">π</button>
+      <button class="btn" data-action="√">√</button>
+      <button class="btn" data-action="log">log</button>
+      <button class="btn" data-action="ln">ln</button>
+      <button class="btn" data-action="sin">sin</button>
+      <button class="btn" data-action="cos">cos</button>
+      <button class="btn" data-action="tan">tan</button>
+      <button class="btn" data-action="^">^</button>
+      <button class="btn" data-action="%">%</button>
+      <button class="btn" data-action="(">(</button>
+      <button class="btn" data-action=")">)</button>
+      <button class="btn equals-button" data-action="=">=</button>
+      <button class="btn del-button" data-action="delete">del</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
